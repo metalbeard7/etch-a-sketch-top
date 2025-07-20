@@ -1,6 +1,7 @@
 //GLOBAL VARIABLES 
 const container = document.querySelector('#container');
 
+
 // DIVS FOR GRID
 function createDivs (num) {
     for (let i = 0; i < num; i++) {
@@ -13,4 +14,8 @@ function createDivs (num) {
 createDivs(16);
 
 
-
+// DIV EVENT LISTENER
+const grid = document.querySelector('.grid');
+grid.addEventListener('mouseover', (e) => {
+    console.log("Mouse entered div.")
+} )
