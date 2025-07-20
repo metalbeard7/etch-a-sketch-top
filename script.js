@@ -28,6 +28,9 @@ gridItems.forEach(item => {
 // NEW GRID BUTTON - ASK HOW MANY SQUARES - RESET 
 const newGrid = document.querySelector('.new-grid');
 
-newGrid.addEventListener('click', => {
+newGrid.addEventListener('click', () => {
+    let numSides = prompt("Enter the number of squares per side:");
+    console.log(numSides);
     
+
 });
