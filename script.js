@@ -15,7 +15,19 @@ createDivs(16);
 
 
 // DIV EVENT LISTENER
-const grid = document.querySelector('.grid');
-grid.addEventListener('mouseover', (e) => {
-    console.log("Mouse entered div.")
-} )
+const gridItems = document.querySelectorAll('.grid');
+
+gridItems.forEach(item => {
+    item.addEventListener('mouseover', () => {
+        item.classList.add("hover");
+        console.log("Mouse entered div.");
+    });
+});
+
+
+// NEW GRID BUTTON - ASK HOW MANY SQUARES - RESET 
+const newGrid = document.querySelector('.new-grid');
+
+newGrid.addEventListener('click', => {
+    
+});
