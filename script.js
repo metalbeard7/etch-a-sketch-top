@@ -1,6 +1,6 @@
 //GLOBAL VARIABLES 
 const container = document.querySelector('#container');
-
+const gridItems = document.querySelectorAll('.grid');
 
 // DIVS FOR GRID
 function createDivs (num) {
@@ -12,17 +12,6 @@ function createDivs (num) {
 };
 
 createDivs(16);
-
-
-// DIV EVENT LISTENER
-const gridItems = document.querySelectorAll('.grid');
-
-gridItems.forEach(item => {
-    item.addEventListener('mouseover', () => {
-        item.classList.add("hover");
-        console.log("Mouse entered div.");
-    });
-});
 
 
 // NEW GRID BUTTON - ASK HOW MANY SQUARES - RESET 
@@ -45,3 +34,13 @@ newGrid.addEventListener('click', () => {
     createDivs(numSides); 
     });
 
+
+// DIV EVENT LISTENER
+
+
+gridItems.forEach(item => {
+    item.addEventListener('mouseover', () => {
+        item.classList.add("hover");
+        console.log("Mouse entered div.");
+    });
+});
