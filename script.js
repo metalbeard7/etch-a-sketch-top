@@ -1,6 +1,6 @@
 //GLOBAL VARIABLES 
 const container = document.querySelector('#container');
-const gridItems = document.querySelectorAll('.grid');
+
 
 // DIVS FOR GRID
 function createDivs (num) {
@@ -24,9 +24,12 @@ newGrid.addEventListener('click', () => {
 
     
     // RESET GRID
+    const gridItems = document.querySelectorAll('.grid');
     gridItems.forEach(item => {
-            /* item.classList.remove("hover"); */
+            item.classList.remove("hover");
             item.remove();
+            console.log("This made it to the log.");
+            
         });
 
     
@@ -37,10 +40,12 @@ newGrid.addEventListener('click', () => {
 
 // DIV EVENT LISTENER
 
-
-gridItems.forEach(item => {
-    item.addEventListener('mouseover', () => {
-        item.classList.add("hover");
-        console.log("Mouse entered div.");
-    });
+container.addEventListener('mouseover', (event) => {
+    if (event.target.classList.contains('grid')) {
+        console.log("You hovered over a grid div!");
+        let target = event.target;
+        target.classList.add("hover");
+    };
 });
+
+
