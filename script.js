@@ -4,6 +4,8 @@ container.style.width = `${gridDims}px`;
 container.style.height = `${gridDims}px`;
 
 const gridDims = 600;
+let rows = 16;
+let cols = 16;
 
 
 
@@ -13,6 +15,8 @@ function createDivs (num) {
         const newDiv = document.createElement('div');
         newDiv.classList.add('grid');
         container.appendChild(newDiv);
+
+
     };
 };
 
