@@ -1,12 +1,19 @@
 .container {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 400px;
+    width: 400px;
+
 }
 
 .grid {
-    height: 200px;
-    width: 200px;
-    border: solid red 1px;
+
+    flex: 0 1 ;
+    aspect-ratio: 1 / 1;
+
+
 }
 
 .hover {
