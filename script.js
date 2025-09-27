@@ -43,9 +43,10 @@ newGrid.addEventListener('click', () => {
             
         });
 
-    
+    rows = numSides;
+    cols = numSides;
 
-    createDivs(numSides); 
+    createDivs(); 
     });
 
 
