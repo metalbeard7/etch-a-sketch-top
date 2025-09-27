@@ -1,10 +1,15 @@
 //GLOBAL VARIABLES 
 const container = document.querySelector('#container');
+container.style.width = `${gridDims}px`;
+container.style.height = `${gridDims}px`;
+
+const gridDims = 600;
+
 
 
 // DIVS FOR GRID
 function createDivs (num) {
-    for (let i = 0; i < num; i++) {
+    for (let i = 0; i < num*num; i++) {
         const newDiv = document.createElement('div');
         newDiv.classList.add('grid');
         container.appendChild(newDiv);
@@ -47,5 +52,10 @@ container.addEventListener('mouseover', (event) => {
         target.classList.add("hover");
     };
 });
+
+
+// CSS MANIPULATION
+
+// gridItems.style.width = `calc(100% / ${num)`;
 
 
