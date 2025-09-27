@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #C8E5EE;
+    background-color: #5FB2CE;
 }
 
 .container {
@@ -12,12 +12,13 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-color: white;
     margin: 100px auto;
 
 }
 
 .grid {
-
+    border: 1px solid whitesmoke;
     flex: 0 1 ;
     aspect-ratio: 1 / 1;
 
