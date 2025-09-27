@@ -11,16 +11,18 @@ let cols = 16;
 
 // DIVS FOR GRID
 function createDivs (num) {
-    for (let i = 0; i < num*num; i++) {
+    for (let i = 0; i < rows * cols; i++) {
         const newDiv = document.createElement('div');
         newDiv.classList.add('grid');
         container.appendChild(newDiv);
 
+        newDiv.style.width = `${(gridDims / cols) - 2}px`;
+        newDiv.style.height = `${(gridDims / rows) - 2}px`;        
 
     };
 };
 
-createDivs(16);
+createDivs();
 
 
 // NEW GRID BUTTON - ASK HOW MANY SQUARES - RESET 
