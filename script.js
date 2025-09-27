@@ -1,11 +1,11 @@
 //GLOBAL VARIABLES 
-const container = document.querySelector('#container');
-container.style.width = `${gridDims}px`;
-container.style.height = `${gridDims}px`;
-
 const gridDims = 600;
 let rows = 16;
 let cols = 16;
+
+const container = document.querySelector('#container');
+container.style.width = `${gridDims}px`;
+container.style.height = `${gridDims}px`;
 
 
 
