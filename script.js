@@ -59,10 +59,3 @@ container.addEventListener('mouseover', (event) => {
         target.classList.add("hover");
     };
 });
-
-
-// CSS MANIPULATION
-
-// gridItems.style.width = `calc(100% / ${num)`;
-
-
