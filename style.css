@@ -37,11 +37,20 @@ body {
 
 #title-header {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 40px auto -20px;
+    background-color: #E6ADBB;
+    padding: 10px 200px 10px 200px;
+    box-shadow: 5px 5px rgba(255, 0, 170, 0.103);
+    border-radius: 10px;
 }
 
 .btn-container {
     display: flex;
     justify-content: center;
-    margin: -75px auto;
+    margin: -75px auto;;
+    gap: 10px;
+}
 
+.active {
+    background-color: #BBE6AD;
 }
