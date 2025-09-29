@@ -32,8 +32,14 @@ const newGrid = document.querySelector('.new-grid');
 
 // PROMPT
 newGrid.addEventListener('click', () => {
-    let numSides = prompt("Enter the number of squares per side:");
-    console.log(numSides);
+    let numSides;
+    do {
+
+     numSides = prompt("Enter the number of squares per side (1-100):", "16");
+     numSides = Number(numSides);
+    } while (isNaN(numSides) || numSides < 1 || numSides > 100);
+
+    
 
     
     // RESET GRID
