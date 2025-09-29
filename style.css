@@ -54,3 +54,19 @@ body {
 .active {
     background-color: #BBE6AD;
 }
+
+#new-grid {
+
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#randomize {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#shading {
+    padding: 10px;
+    border-radius: 10px;
+}
