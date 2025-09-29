@@ -86,18 +86,11 @@ const randomize = document.querySelector('.randomize');
 
 randomize.addEventListener('click', () => {
     randomize.classList.toggle('active');
-    }
-);
+});
 
 // SHADING BUTTON - PRESET OPACITY, PROGRESSIVELY DARKENS WITH MOUSEOVER EVENT
 const shading = document.querySelector('.shading');
 
 shading.addEventListener('click', () => {
     shading.classList.toggle('active');
-    if (shading.classList.contains('active')) {
-        console.log("Toggle is on");
-    } else {
-        console.log("Toggle is off");
-        
-    }    
 });
