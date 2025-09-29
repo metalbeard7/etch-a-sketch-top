@@ -6,7 +6,8 @@ let cols = 16;
 const container = document.querySelector('#container');
 container.style.width = `${gridDims}px`;
 container.style.height = `${gridDims}px`;
-
+const gridItems = document.querySelectorAll('.grid');
+const hover = document.querySelector('.hover');
 
 
 // DIVS FOR GRID
