@@ -10,6 +10,7 @@ const gridItems = document.querySelectorAll('.grid');
 const hover = document.querySelector('.hover');
 
 
+
 // DIVS FOR GRID
 function createDivs (num) {
     for (let i = 0; i < rows * cols; i++) {
@@ -58,6 +59,11 @@ container.addEventListener('mouseover', (event) => {
         let target = event.target;
         target.classList.add("hover");
     
+        if (randomize.classList.contains('active')) {
+            target.style.backgroundColor = 
+            `rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`;
+        }
+
         if (shading.classList.contains('active')) {
             let currentOpacity = parseFloat(target.style.opacity) || 0.2;
             currentOpacity = Math.min(currentOpacity + 0.2, 1);
@@ -70,7 +76,12 @@ container.addEventListener('mouseover', (event) => {
 
 
 // RANDOMIZE BUTTON - MAKE GRID SQUARES RANDOM COLORS
+const randomize = document.querySelector('.randomize');
 
+randomize.addEventListener('click', () => {
+    randomize.classList.toggle('active');
+    }
+);
 
 // SHADING BUTTON - PRESET OPACITY, PROGRESSIVELY DARKENS WITH MOUSEOVER EVENT
 const shading = document.querySelector('.shading');
