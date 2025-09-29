@@ -82,26 +82,5 @@ shading.addEventListener('click', () => {
     } else {
         console.log("Toggle is off");
         
-    }
-
-/*     document.querySelectorAll('.grid').forEach(item => {
-        if (shading.classList.contains('active')) {
-            item.style.opacity = ".2"
-        } else {
-            item.style.opacity = "1";
-        }
-    });
-    console.log("opacity button"); */
-    
+    }    
 });
-
-console.log(currentOpacity);
-
-
-/* 
-create toggle for shading button
-add opacity to current event listener to increase opacity if button is active*/
-
-/* 
-const currentOpacity = gridItems.style.opacity 
-*/
