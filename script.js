@@ -36,7 +36,6 @@ newGrid.addEventListener('click', () => {
 
     
     // RESET GRID
-    const gridItems = document.querySelectorAll('.grid');
     gridItems.forEach(item => {
             item.classList.remove("hover");
             item.remove();
@@ -55,8 +54,53 @@ newGrid.addEventListener('click', () => {
 
 container.addEventListener('mouseover', (event) => {
     if (event.target.classList.contains('grid')) {
-        console.log("You hovered over a grid div!");
         let target = event.target;
         target.classList.add("hover");
-    };
+    
+        if (shading.classList.contains('active')) {
+            let currentOpacity = parseFloat(target.style.opacity) || 0.2;
+            currentOpacity = Math.min(currentOpacity + 0.2, 1);
+            target.style.opacity = currentOpacity.toString();
+        }
+    }
 });
+        
+        
+
+
+// RANDOMIZE BUTTON - MAKE GRID SQUARES RANDOM COLORS
+
+
+// SHADING BUTTON - PRESET OPACITY, PROGRESSIVELY DARKENS WITH MOUSEOVER EVENT
+const shading = document.querySelector('.shading');
+
+shading.addEventListener('click', () => {
+    shading.classList.toggle('active');
+    if (shading.classList.contains('active')) {
+        console.log("Toggle is on");
+    } else {
+        console.log("Toggle is off");
+        
+    }
+
+    document.querySelectorAll('.grid').forEach(item => {
+        if (shading.classList.contains('active')) {
+            item.style.opacity = ".2"
+        } else {
+            item.style.opacity = "1";
+        }
+    });
+    console.log("opacity button");
+    
+});
+
+console.log(currentOpacity);
+
+
+/* 
+create toggle for shading button
+add opacity to current event listener to increase opacity if button is active*/
+
+/* 
+const currentOpacity = gridItems.style.opacity 
+*/
