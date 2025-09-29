@@ -36,7 +36,8 @@ newGrid.addEventListener('click', () => {
 
     
     // RESET GRID
-    gridItems.forEach(item => {
+    
+    document.querySelectorAll('.grid').forEach(item => {
             item.classList.remove("hover");
             item.remove();
             console.log("This made it to the log.");
@@ -83,14 +84,14 @@ shading.addEventListener('click', () => {
         
     }
 
-    document.querySelectorAll('.grid').forEach(item => {
+/*     document.querySelectorAll('.grid').forEach(item => {
         if (shading.classList.contains('active')) {
             item.style.opacity = ".2"
         } else {
             item.style.opacity = "1";
         }
     });
-    console.log("opacity button");
+    console.log("opacity button"); */
     
 });
 
